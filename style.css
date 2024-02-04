@@ -1,87 +1,97 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #800020; /* burgundy */
-    color: #ffffff; /* alb */
+    background-color: #8c0000;
+    font-family: Arial, sans-serif;
 }
 
 header {
     text-align: center;
-    padding: 20px;
+    padding: 1em 0;
+    background-color: #750000; /* Burgundy */
+    color: #fff;
 }
 
-#container {
+#audio-container {
     text-align: center;
+    margin-top: 20px;
+}
+
+#audio-container audio {
+    width: 80%;
 }
 
 #video-container {
-    position: relative;
-    width: 80%; /* Ajustați la dimensiunea dorită */
-    max-width: 800px; /* Limitați la o lățime maximă */
-    margin: 0 auto; /* Centrare orizontală */
-}
-
-#video {
-    width: 100%;
-    height: auto;
-}
-
-#volumeControl {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    max-width: 200px;
-}
-
-#bottom-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-#frame-container {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    max-width: 800px;
-    margin-top: 20px;
-}
-
-#text-container {
-    margin-top: 20px;
     text-align: center;
 }
 
-#remaining-text {
-    opacity: 0;
-    animation: appear 2s ease-out forwards;
+.video-frame {
+    overflow: hidden;
+    width: 40%;
+    margin: 20px auto;
+    border: 5px solid white;
 }
 
-@keyframes appear {
+#video-container video {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s;
+}
+
+#image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.medium-image {
+    width: 20%;
+    height: auto;
+    transition: transform 0.5s;
+}
+
+#image-container img:first-child {
+    width: 80%;
+    order: 3;
+}
+
+#bottom-text {
+    text-align: center;
+    
+    color: white; /* Adăugat pentru culoarea textului */
+}
+
+.message-container {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.message-container p {
+    text-align: center;
+    margin: 10px auto 40px; /* Adaugat un margin mai mare jos */
+    max-width: 60%;
+}
+
+/* Animare la accesarea paginii */
+body, #image-container img, .message-container {
+    animation: fadeInUp 5s forwards;
+    text-align: center;
+}
+
+@keyframes fadeInUp {
     from {
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
-    }
-}
-
-.pulse {
-    animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
+        transform: translateY(0);
     }
 }

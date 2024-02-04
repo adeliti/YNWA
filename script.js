@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var bottomMessage = document.getElementById("bottom-message");
-
     // Afișăm mesajul de jos
-    bottomMessage.style.display = "block";
+    var bottomMessage = document.getElementById("bottom-text");
+    bottomMessage.style.opacity = "1";
+    bottomMessage.style.transform = "translateY(0)";
 
     // Pornim sunetul de la secunda 4
     var audio = document.getElementById("ynwaSound");
-    audio.currentTime = 4;
+    audio.currentTime = 04;
 
     // Setăm începutul și sfârșitul clipului video
-    var video = document.getElementById("video");
+    var video = document.getElementById("ynwaVideo");
     video.currentTime = 0;
     video.addEventListener("loadedmetadata", function () {
         // Asigurăm că video a fost încărcat înainte de a seta sfârșitul
