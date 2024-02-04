@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #800020; /* burgundy */
+    color: #ffffff; /* alb */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+#container {
+    text-align: center;
+}
+
+#video-container {
+    position: relative;
+    width: 80%; /* Ajustați la dimensiunea dorită */
+    max-width: 800px; /* Limitați la o lățime maximă */
+    margin: 0 auto; /* Centrare orizontală */
+}
+
+#video {
+    width: 100%;
+    height: auto;
+}
+
+#volumeControl {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 200px;
+}
+
+#bottom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#frame-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+#text-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#remaining-text {
+    opacity: 0;
+    animation: appear 2s ease-out forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.pulse {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

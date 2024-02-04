@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>You'll Never Walk Alone</title>
+</head>
+<body>
+    <header>
+        <h1>You'll Never Walk Alone</h1>
+    </header>
+    <section id="container">
+        <audio id="ynwaSound" controls>
+            <source src="sunet.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+
+        <div id="video-container">
+            <video id="video" width="100%" height="auto" autoplay muted>
+                <source src="clip.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+        </div>
+
+        <div id="bottom-content">
+            <div id="frame-container" class="pulse">
+                <!-- Adăugați imagini animate aici -->
+            </div>
+
+            <div id="text-container">
+                <p id="remaining-text">
+                    It was not too bad so far, let’s try to make it even better in the future.
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
